@@ -8,8 +8,8 @@
 #' @param before As `after`, but before
 #' @param subreddit Only return posts made in this subreddit
 #' @param nest_level How deep to search? `nest_level = 1` returns only top-level comments
-#' @return A matrix of the infile
-#' @export A tibble of reddit submissions
+#' @return A tibble of reddit submissions
+#' @export
 #' @importFrom jsonlite fromJSON
 #' @importFrom magrittr %>%
 #' @importFrom dplyr select

@@ -24,7 +24,7 @@ getPushshiftData(...)
 \item{nest_level}{How deep to search? `nest_level = 1` returns only top-level comments}
 }
 \value{
-A matrix of the infile
+A tibble of reddit submissions
 }
 \description{
 Gets the pushshift data
