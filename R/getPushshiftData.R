@@ -14,12 +14,20 @@
 #' @importFrom magrittr %>%
 #' @importFrom dplyr select
 #' @import tibble
-getPushshiftData <- function(...) {
-  getPushshiftURL(...) %>%
+getPushshiftData <- function(postType, ...) {
+  if(postType == "submission") {
+  getPushshiftURL(postType, ...) %>%
     jsonlite::fromJSON() %>%
     .$data %>%
-    select("author", "body", "created_utc", "id", "parent_id", "score", "subreddit") %>%
+    select(-gildings, -media, -media_embed, -preview, -secure_media, -secure_media_embed) %>%
     as_tibble()
+  } else {
+    getPushshiftURL(postType, ...) %>%
+      jsonlite::fromJSON() %>%
+      .$data %>%
+      select(-gildings) %>%
+      as_tibble()
+  }
 }
 
 #' Gets the pushshift URL
