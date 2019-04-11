@@ -15,11 +15,21 @@
 #' @importFrom dplyr select
 #' @import tibble
 getPushshiftData <- function(postType, ...) {
+  if(postType == "submission") {
   getPushshiftURL(postType, ...) %>%
     jsonlite::fromJSON() %>%
     .$data %>%
     jsonlite::flatten(recursive = TRUE) %>%
+    select(author, title, selftext, created_utc, id, num_comments, score, subreddit) %>%
     as_tibble()
+  } else {
+    getPushshiftURL(postType, ...) %>%
+      jsonlite::fromJSON() %>%
+      .$data %>%
+      jsonlite::flatten(recursive = TRUE) %>%
+      select(author, body, parent_id, score, created_utc, subreddit) %>%
+      as_tibble()
+  }
 }
 
 #' Gets the pushshift URL
