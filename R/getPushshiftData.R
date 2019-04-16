@@ -12,7 +12,7 @@
 #' @export
 #' @importFrom jsonlite fromJSON
 #' @importFrom magrittr %>%
-#' @importFrom dplyr select
+#' @importFrom dplyr select filter
 #' @import tibble
 getPushshiftData <- function(postType, ...) {
   if(postType == "submission") {
