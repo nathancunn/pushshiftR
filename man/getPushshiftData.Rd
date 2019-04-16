@@ -4,7 +4,7 @@
 \alias{getPushshiftData}
 \title{Gets the pushshift data}
 \usage{
-getPushshiftData(...)
+getPushshiftData(postType, ...)
 }
 \arguments{
 \item{postType}{One of `submission` or `comment`}
