@@ -4,9 +4,16 @@
 \alias{getPushshiftURL}
 \title{Gets the pushshift URL}
 \usage{
-getPushshiftURL(postType = "submission", title = NULL, size = NULL,
-  q = NULL, after = NULL, before = NULL, subreddit = NULL,
-  nest_level = NULL)
+getPushshiftURL(
+  postType = "submission",
+  title = NULL,
+  size = NULL,
+  q = NULL,
+  after = NULL,
+  before = NULL,
+  subreddit = NULL,
+  nest_level = NULL
+)
 }
 \arguments{
 \item{postType}{One of `submission` or `comment`}

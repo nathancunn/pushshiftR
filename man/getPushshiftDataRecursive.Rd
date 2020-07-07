@@ -4,9 +4,17 @@
 \alias{getPushshiftDataRecursive}
 \title{Repeats getPushshiftData until desired period covered}
 \usage{
-getPushshiftDataRecursive(postType = "submission", title = NULL,
-  size = NULL, q = NULL, after = NULL, before = NULL,
-  subreddit = NULL, nest_level = NULL, delay = 0)
+getPushshiftDataRecursive(
+  postType = "submission",
+  title = NULL,
+  size = NULL,
+  q = NULL,
+  after = NULL,
+  before = NULL,
+  subreddit = NULL,
+  nest_level = NULL,
+  delay = 0
+)
 }
 \arguments{
 \item{postType}{One of `submission` or `comment`}
