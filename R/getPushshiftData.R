@@ -54,7 +54,7 @@ getPushshiftURL <- function(postType = "submission",
                              before = NULL,
                              subreddit = NULL,
                              nest_level = NULL) {
-  if(postType %!in% c("submission", "comment")) {
+  if(postType %not_in% c("submission", "comment")) {
     stop("postType must be one of `submission` or `comment`")
   }
   return(paste("https://api.pushshift.io/reddit/search/",
