@@ -66,7 +66,7 @@ getPushshiftURL <- function(postType = "submission",
         ifelse(is.null(after), "", sprintf("&after=%s", after)),
         ifelse(is.null(before), "", sprintf("&before=%s", before)),
         ifelse(is.null(subreddit), "", sprintf("&subreddit=%s", subreddit)),
-        ifelse(is.null(subreddit), "", sprintf("&nest_level=%s", nest_level)),
+        ifelse(is.null(nest_level), "", sprintf("&nest_level=%s", nest_level)),
         sep = ""))
 }
 
